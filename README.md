@@ -1,3 +1,5 @@
+Read this in: [Português](#c-game) | [English](#english-translated)
+
 # C-Game
 Um compilado de minijogos desenvolvidos totalmente na linguagem **C**. 
 Criado por [@DRibeiroSs](https://github.com/DRibeiroSs) e [@vichugo-bit](https://github.com/vichugo-bit).
@@ -28,7 +30,6 @@ Como este projeto é feito em C, você precisará de um compilador (como o GCC) 
 
 
 # English translated
-
 
 # C-Game
 A collection of minigames developed entirely in the **C** programming language.

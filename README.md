@@ -22,7 +22,14 @@ Criado por [@DRibeiroSs](https://github.com/DRibeiroSs) e [@vichugo-bit](https:/
 Como este projeto é feito em C, você precisará de um compilador (como o GCC) ou um IDE (como o DevC++) instalado na sua máquina.
 
 
-#English translated
+
+
+
+
+
+# English translated
+
+
 # C-Game
 A collection of minigames developed entirely in the **C** programming language.
 Created by [@DRibeiroSs](https://github.com/DRibeiroSs) and [@vichugo-bit](https://github.com/vichugo-bit).

@@ -109,13 +109,7 @@ void coletarNomeJogador(char *nome) {
 	printf("6) Pedro Arthur\n");
 	printf("7) Ricardo Casseb\n");
 	
-	if (scanf("%d", &opcao) != 1) {
-		limparBuffer();
-		
-		printf("Opcao Invalida!");
-		sleep(2);
-		menuPrincipal();
-	}
+	scanfInt(&opcao);
 	
 	if (opcao == 1) {
 		strcpy(nome, "Giovanna");

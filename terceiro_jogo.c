@@ -16,14 +16,23 @@ void terceiroJogo() {
    	 	printf("Jogador 1: [Gousma 1: %d] [Gousma 2: %d] | Jogador 2: [Gousma 1: %d] [Gousma 2: %d]\n\n", j1G1, j1G2, j2G1, j2G2);
         printf("VEZ DO JOGADOR %d\n\n", turno);
         printf("1 - Atacar\n2 - Dividir Gousma (Metade)\nEscolha: ");
-        scanf("%d", &opcao);
-
+        scanfInt(&opcao);
+		
         if (opcao == 1) {
             printf("Usar qual Gousma (1 ou 2)? ");
-            scanf("%d", &origem);
+            scanfInt(&origem);
+            if (origem > 2 || origem < 1) {
+            	printf("opcao invalida\n");
+            	sleep(2);
+				continue;
+			}
             printf("Atacar qual inimiga (1 ou 2)? ");
-            scanf("%d", &alvo);
-
+            scanfInt(&alvo);
+			if (alvo > 2 || alvo < 1) {
+            	printf("opcao invalida\n");
+            	sleep(2);
+				continue;
+			}
             // Logica de Ataque
             if (turno == 1) {
 				int forca = (origem == 1) ? j1G1 : j1G2;
@@ -75,7 +84,11 @@ void terceiroJogo() {
                 printf("\nImpossivel dividir (Furia baixa ou ja possui duas)!\n");
             }
             sleep(2);
-        }
+        } else {
+        	printf("opcao invalida\n");
+            sleep(2);
+			continue;
+		}
 
 		// Verifica se alguma passou de 5 e explodiu
         if (j1G1 > 5) j1G1 = 0;

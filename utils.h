@@ -1,7 +1,7 @@
 #ifndef UTILS_H
 #define UTILS_H
 
-void limparBuffer();
 void limpar();
+int scanfInt(int *destino);
 
 #endif

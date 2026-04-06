@@ -25,14 +25,8 @@ int menuPrincipal() {
 	printf("2: Cobra na Caixa\n");
 	printf("3: Gousmas War\n");
 	printf("4: Sair\n");
-		
-	if (scanf("%d", &menu) != 1) {
-		limparBuffer();
-		
-		printf("Opcao Invalida!");
-		sleep(2);
-		menuPrincipal();
-	}
+	
+	scanfInt(&menu);
 	
 	if (menu == 1) {
 		primeiroJogo();

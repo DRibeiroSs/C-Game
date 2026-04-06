@@ -1,3 +1,14 @@
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <ctype.h>
+#include <windows.h>
+
+
 void TercJogo() {
 	// variáveis  para cada gousma
 	int j1_g1, j1_g2, j2_g1, j2_g2;

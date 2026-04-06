@@ -3,18 +3,19 @@
 #include <time.h>
 #include <ctype.h>
 #include <windows.h>
+#include "primeiro_jogo.h"
 
-void PrimJogo(){
+void primeiroJogo() {
 
 	char JogarD;
 	do{
-	char resposta;
-	int pontuacao = 0;
-	int valida;
-	Limpar();
+		char resposta;
+		int pontuacao = 0;
+		int valida;
+		limpar();
 	
-	do {
-			Limpar();
+		do {
+			limpar();
 			printf("Jogo de Perguntas e Respostas, se prepare pois eh dificil!\n\n");
 			printf("----- Pergunta 1 -----\n");
 			printf("Quanto sao 5 + 5?\n");
@@ -40,8 +41,8 @@ void PrimJogo(){
 		} while (valida == 0);
 		sleep(2);
 	
-	do {
-			Limpar();
+		do {
+			limpar();
 			printf("----- Pergunta 2 -----\n");
 			printf("Quem eh Ganondorf?\n");
 			printf("A) Lorde das Trevas\n");
@@ -66,8 +67,8 @@ void PrimJogo(){
 		} while (valida == 0);
 		sleep(2);
 	
-	do {
-			Limpar();
+		do {
+			limpar();
 			printf("----- Pergunta 3 -----\n");
 			printf("Qual o plural de vilao\n");
 			printf("A) Villand Saga\n");
@@ -92,8 +93,8 @@ void PrimJogo(){
 		} while (valida == 0);
 		sleep(2);
 		
-	do {
-			Limpar();
+		do {
+			limpar();
 			printf("----- Pergunta 4 -----\n");
 			printf("No jogo Valorant, qual o nome da moeda principal usada para comprar skins\n");
 			printf("A) V-Bucks?\n");
@@ -118,8 +119,8 @@ void PrimJogo(){
 		} while (valida == 0);
 		sleep(2);
 		
-	do {
-			Limpar();
+		do {
+			limpar();
 			printf("----- Pergunta 5 -----\n");
 			printf("Na linguagem C, qual simbolo usamos para comparar se dois valores sao iguais?\n");
 			printf("A) =\n");
@@ -144,21 +145,23 @@ void PrimJogo(){
 		} while (valida == 0);
 		sleep(2);
 		
-	sleep(2);
-	Limpar();
-	printf("----- FIM DE JOGO -----\n\n");
-	printf("Sua pontuacao final foi: %i de 5\n\n", pontuacao);
-	
-	if(pontuacao == 5){
-		printf("Duas palavras pra voce, PARA BENS, voce gabaritou!");
-	}
-	else if(pontuacao >= 3){
-		printf("Valeu o esforco, um pouco acima da media mas tenta gabaritar na proxima!");
-	}
-	else{
-		printf("Tenta dar uma revisada ai, mais sorte da proxima...");
-	}
-		printf("\nDeseja jogar novamente? (S/N): ");
-		scanf(" %c", &JogarD);
+		limpar();
+		printf("----- FIM DE JOGO -----\n\n");
+		printf("Sua pontuacao final foi: %i de 5\n\n", pontuacao);
+		
+		if(pontuacao == 5){
+			printf("Duas palavras pra voce, PARA BENS, voce gabaritou!");
+		}
+		else if(pontuacao >= 3){
+			printf("Valeu o esforco, um pouco acima da media mas tenta gabaritar na proxima!");
+		}
+		else{
+			printf("Tenta dar uma revisada ai, mais sorte da proxima...");
+		}
+			printf("\nDeseja jogar novamente? (S/N): ");
+			scanf(" %c", &JogarD);
 	}while(JogarD == 's' || JogarD == 'S');
+	
+	menuPrincipal();
+	
 }

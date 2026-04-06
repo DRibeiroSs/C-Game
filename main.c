@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <unistd.h>
+#include "jogos.h"
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
@@ -175,7 +177,6 @@ void SegJogo(){
 	char JogarD;
 	int Primeiro; //variavel pra definir quem comeca primeiro
 	int ValNomes;
-	srand(time(NULL));
 	
 	
 	do{
@@ -377,33 +378,9 @@ void TercJogo() {
     } while (jogarNovamente == 's' || jogarNovamente == 'S');
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 int main(int argc, char *argv[]) {
 	
+	srand(time(NULL));
 	system("color 6F");
 	
 	do{

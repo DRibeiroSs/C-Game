@@ -7,7 +7,7 @@
 
 void primeiroJogo() {
 
-	char JogarD;
+	char jogarNovamente;
 	do{
 		char resposta;
 		int pontuacao = 0;
@@ -158,10 +158,8 @@ void primeiroJogo() {
 		else{
 			printf("Tenta dar uma revisada ai, mais sorte da proxima...");
 		}
-			printf("\nDeseja jogar novamente? (S/N): ");
-			scanf(" %c", &JogarD);
-	}while(JogarD == 's' || JogarD == 'S');
-	
-	menuPrincipal();
-	
+		
+		printf("\nDigite [S] para jogar novamente e [N] para sair: ");
+		scanf(" %c", &jogarNovamente);
+	}while(jogarNovamente == 's' || jogarNovamente == 'S');
 }

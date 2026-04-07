@@ -9,15 +9,15 @@ void terceiroJogo() {
     int j1G1 = 1, j1G2 = 1, j2G1 = 1, j2G2 = 1;
     int turno = 1, opcao, origem, alvo, forca;
     char jogarNovamente;
-
+	//so para o jogor rodar quando uma gosma tiver pelo menos 1 de karma	
     while ((j1G1 > 0 || j1G2 > 0) && (j2G1 > 0 || j2G2 > 0)) {
         limpar();
     	printf("--- GOUSMAS WAR ---\n");
    	 	printf("Jogador 1: [Gousma 1: %d] [Gousma 2: %d] | Jogador 2: [Gousma 1: %d] [Gousma 2: %d]\n\n", j1G1, j1G2, j2G1, j2G2);
         printf("VEZ DO JOGADOR %d\n\n", turno);
         printf("1 - Atacar\n2 - Dividir Gousma (Metade)\nEscolha: ");
-        scanfInt(&opcao);
-		
+         
+		scanfInt(&opcao);	
         if (opcao == 1) {
             printf("Usar qual Gousma (1 ou 2)? ");
             scanfInt(&origem);

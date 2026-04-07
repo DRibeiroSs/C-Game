@@ -15,7 +15,7 @@ void main(int argc, char *argv[]) {
 }
 
 
-int menuPrincipal() {
+void menuPrincipal() {
 	limpar();
 	
 	int menu;

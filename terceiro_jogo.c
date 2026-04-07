@@ -7,7 +7,7 @@
 
 void terceiroJogo() {
     int j1G1 = 1, j1G2 = 1, j2G1 = 1, j2G2 = 1;
-    int turno = 1, opcao, origem, alvo;
+    int turno = 1, opcao, origem, alvo, forca;
     char jogarNovamente;
 
     while ((j1G1 > 0 || j1G2 > 0) && (j2G1 > 0 || j2G2 > 0)) {
@@ -35,17 +35,37 @@ void terceiroJogo() {
 			}
             // Logica de Ataque
             if (turno == 1) {
-				int forca = (origem == 1) ? j1G1 : j1G2;
+				
+				if (origem == 1) {
+            		forca = j1G1;
+				} else {
+					forca = j1G2;
+				}
                 
                 if (forca > 0) {
-                    if (alvo == 1 && j2G1 > 0) { j2G1 += forca; turno = 2; }
-                    else if (alvo == 2 && j2G2 > 0) { j2G2 += forca; turno = 2; }
+                    if (alvo == 1 && j2G1 > 0) { 
+						j2G1 += forca; 
+						turno = 2; 
+					} else if (alvo == 2 && j2G2 > 0) { 
+						j2G2 += forca; 
+						turno = 2; 
+					}
                 }
             } else {
-                int forca = (origem == 1) ? j2G1 : j2G2;
+            	if (origem == 1) {
+            		forca = j2G1;
+				} else {
+					forca = j2G2;
+				}
+
                 if (forca > 0) {
-                    if (alvo == 1 && j1G1 > 0) { j1G1 += forca; turno = 1; }
-                    else if (alvo == 2 && j1G2 > 0) { j1G2 += forca; turno = 1; }
+                    if (alvo == 1 && j1G1 > 0) { 
+						j1G1 += forca; 
+						turno = 1; 
+					} else if (alvo == 2 && j1G2 > 0) { 
+						j1G2 += forca; 
+						turno = 1; 
+					}
                 }
             }
         } else if (opcao == 2) {
@@ -79,7 +99,11 @@ void terceiroJogo() {
 
             if (dividiu) {
                 printf("\nGousma dividida ao meio!\n");
-                turno = (turno == 1) ? 2 : 1; // Passa o turno
+                if (turno == 1) {
+                	turno = 2;
+				} else {
+					turno = 1;
+				}
             } else {
                 printf("\nImpossivel dividir (Furia baixa ou ja possui duas)!\n");
             }
@@ -96,9 +120,16 @@ void terceiroJogo() {
         if (j2G1 > 5) j2G1 = 0;
 		if (j2G2 > 5) j2G2 = 0;
     }
-
+	
+	int vencedor;
+	if (j1G1 + j1G2 > 0){
+		vencedor = 1;
+	} else {
+		vencedor = 2;
+	}
+	
     limpar();
-    printf("FIM DE JOGO! VENCEDOR: JOGADOR %d\n", (j1G1 + j1G2 > 0) ? 1 : 2);
+    printf("FIM DE JOGO! VENCEDOR: JOGADOR %d\n", vencedor);
     printf("Deseja jogar novamente? (S/N): ");
     scanf(" %c", &jogarNovamente);
     if (jogarNovamente == 's' || jogarNovamente == 'S') {
@@ -107,7 +138,4 @@ void terceiroJogo() {
 		menuPrincipal();
 	}
 }
-
-	
-
 

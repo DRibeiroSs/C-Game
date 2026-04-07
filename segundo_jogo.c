@@ -149,4 +149,5 @@ void segundoJogo(){
 		printf("\nDeseja jogar novamente? (S/N): ");
 		scanf(" %c", &jogarNovamente);
 	}while(jogarNovamente == 's' || jogarNovamente == 'S');
+	segundoJogo();
 }

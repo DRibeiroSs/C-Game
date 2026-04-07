@@ -162,4 +162,5 @@ void primeiroJogo() {
 		printf("\nDigite [S] para jogar novamente e [N] para sair: ");
 		scanf(" %c", &jogarNovamente);
 	}while(jogarNovamente == 's' || jogarNovamente == 'S');
+	primeiroJogo();
 }

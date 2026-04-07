@@ -49,8 +49,14 @@ void terceiroJogo() {
 					} else if (alvo == 2 && j2G2 > 0) { 
 						j2G2 += forca; 
 						turno = 2; 
+					} else {
+						printf("esta gousma esta morta e n pode ser atacada");
+						sleep(2);
 					}
-                }
+                } else {
+                	printf("esta gousma esta morta e nao pode ser escolhida");
+                	sleep(2);
+				}
             } else {
             	if (origem == 1) {
             		forca = j2G1;
@@ -65,8 +71,14 @@ void terceiroJogo() {
 					} else if (alvo == 2 && j1G2 > 0) { 
 						j1G2 += forca; 
 						turno = 1; 
+					} else {
+						printf("esta gousma esta morta e n pode ser atacada");
+						sleep(2);
 					}
-                }
+                } else {
+                	printf("esta gousma esta morta e nao pode ser escolhida");
+                	sleep(2);
+				}
             }
         } else if (opcao == 2) {
             int dividiu = 0;
@@ -132,10 +144,14 @@ void terceiroJogo() {
     printf("FIM DE JOGO! VENCEDOR: JOGADOR %d\n", vencedor);
     printf("Deseja jogar novamente? (S/N): ");
     scanf(" %c", &jogarNovamente);
-    if (jogarNovamente == 's' || jogarNovamente == 'S') {
-    	terceiroJogo();
-	} else {
+    jogarNovamente = toupper(jogarNovamente);
+	
+	if(jogarNovamente == 'S'){
+		segundoJogo();
+	} else if(jogarNovamente == 'N'){
 		menuPrincipal();
+	} else {
+		printf("\n Opcao invalida, encerrando.");
 	}
 }
 
